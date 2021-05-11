@@ -15,7 +15,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         FXMLLoader fxmlLoader = new FXMLLoader();
-        fxmlLoader.setLocation(getClass().getResource("/chess.fxml"));
+        fxmlLoader.setLocation(getClass().getResource("/fxml/chess.fxml"));
         fxmlLoader.load();
         Parent parent = fxmlLoader.getRoot();
         Scene scene = new Scene(parent);
