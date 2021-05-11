@@ -22,7 +22,7 @@
                      <children>
                         <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@Jadys/3x/sailly@1x.png" />
+                              <Image url="@../artefacts/monkey.png" />
                            </image>
                         </ImageView>
                         <Label fx:id="labelMove" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="285.0" text="PXB2" textFill="#35231a">
