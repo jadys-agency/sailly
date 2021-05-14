@@ -48,11 +48,11 @@
                   <Insets left="15.0" />
                </HBox.margin>
             </Label>
-            <JFXButton prefHeight="32.0" prefWidth="32.0" text=" ">
+            <JFXButton fx:id="buttonCheckMate" prefHeight="32.0" prefWidth="32.0" text=" ">
                <styleClass>
                   <String fx:value="button-normal" />
                   <String fx:value="button-with-icon" />
-                  <String fx:value="chessMate" />
+                  <String fx:value="checkMate" />
                </styleClass>
             </JFXButton>
          </children>
@@ -277,7 +277,7 @@
                                     <Insets top="15.0" />
                                  </VBox.margin>
                               </JFXButton>
-                              <JFXButton prefHeight="75.0" prefWidth="75.0" text=" ">
+                              <JFXButton fx:id="buttonChess" prefHeight="75.0" prefWidth="75.0" text=" ">
                                  <VBox.margin>
                                     <Insets top="15.0" />
                                  </VBox.margin>
@@ -321,12 +321,12 @@
          </font>
       </Label>
       <Pane fx:id="paneMoveWindow" prefHeight="115.0" AnchorPane.leftAnchor="-15.0" AnchorPane.rightAnchor="-15.0" AnchorPane.topAnchor="-15.0" />
-      <JFXButton fx:id="buttonClose1" text=" " AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="0.0">
+      <JFXButton fx:id="buttonLock" text=" " AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="0.0">
          <font>
             <Font size="15.0" />
          </font>
          <styleClass>
-            <String fx:value="lockSystem" />
+            <String fx:value="unlock" />
             <String fx:value="button-normal" />
          </styleClass>
       </JFXButton>

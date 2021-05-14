@@ -19,13 +19,16 @@ public class Main extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(getClass().getResource("/fxml/chess.fxml"));
         fxmlLoader.load();
+
         ChessController controller = fxmlLoader.getController();
         controller.setStage(primaryStage);
+
         Parent parent = fxmlLoader.getRoot();
         Scene scene = new Scene(parent);
         scene.setFill(Color.TRANSPARENT);
-        primaryStage.setScene(scene);
         parent.setStyle("-fx-background-radius: 5px;");
+        primaryStage.setScene(scene);
+
         primaryStage.initStyle(StageStyle.TRANSPARENT);
         primaryStage.show();
     }

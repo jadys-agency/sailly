@@ -31,7 +31,11 @@ public class ChessController {
     @FXML
     JFXButton buttonClose;
     @FXML
+    JFXButton buttonLock;
+    @FXML
     Pane paneMoveWindow;
+    @FXML
+    JFXButton buttonCheckMate, buttonChess;
     @Setter
     private Stage stage;
     private double xOffset;
@@ -49,6 +53,8 @@ public class ChessController {
 
         this.disableAllButtons();
         this.enablePieceButtons(true);
+        this.buttonLargeCastling.setDisable(false);
+        this.buttonSmallCastling.setDisable(false);
     }
 
     private void handleWindowMove() {
@@ -122,6 +128,21 @@ public class ChessController {
                 this.disableAllButtons();
                 this.enablePieceButtons(true);
                 eraseLabelMove = true;
+                this.buttonLargeCastling.setDisable(false);
+                this.buttonSmallCastling.setDisable(false);
+                return;
+            }
+
+            p = Pattern.compile("^(O - O)|(O - O - O)$");
+            m = p.matcher(newValue);
+            if (m.matches()) {
+                appendToTextMoves(this.labelMove.getText());
+                this.disableAllButtons();
+                this.enablePieceButtons(true);
+                eraseLabelMove = true;
+                this.buttonLargeCastling.setDisable(false);
+                this.buttonSmallCastling.setDisable(false);
+                return;
             }
         });
     }
@@ -152,11 +173,52 @@ public class ChessController {
         buttonG.setOnAction(event -> appendToLabelMove("g"));
         buttonH.setOnAction(event -> appendToLabelMove("h"));
 
+        buttonChess.setOnAction(event -> {
+            appendToLabelMove("+");
+            this.textMoves.setText(this.textMoves.getText().substring(0, this.textMoves.getLength()) + "+");
+        });
+
+        buttonCheckMate.setOnAction(event -> {
+            appendToLabelMove("#");
+            this.textMoves.setText(this.textMoves.getText().substring(0, this.textMoves.getLength()) + "#");
+        });
+
+        buttonSmallCastling.setOnAction(event -> {
+            labelMove.setText("");
+            appendToLabelMove("O - O");
+            this.disableAllButtons();
+            this.enablePieceButtons(true);
+            this.buttonLargeCastling.setDisable(false);
+            this.buttonSmallCastling.setDisable(false);
+
+        });
+
+        buttonLargeCastling.setOnAction(event -> {
+            labelMove.setText("");
+            appendToLabelMove("O - O - O");
+            this.disableAllButtons();
+            this.enablePieceButtons(true);
+            this.buttonLargeCastling.setDisable(false);
+            this.buttonSmallCastling.setDisable(false);
+        });
+
         buttonX.setOnAction(event -> appendToLabelMove("x"));
         buttonTrash.setOnAction(event -> {
             labelMove.setText("");
             this.disableAllButtons();
             this.enablePieceButtons(true);
+        });
+
+        buttonLock.setOnAction(event -> {
+            if (stage.isAlwaysOnTop()) {
+                stage.setAlwaysOnTop(false);
+                buttonLock.getStyleClass().remove("lock");
+                buttonLock.getStyleClass().add("unlock");
+            } else {
+                stage.setAlwaysOnTop(true);
+                buttonLock.getStyleClass().remove("unlock");
+                buttonLock.getStyleClass().add("lock");
+            }
         });
     }
 
