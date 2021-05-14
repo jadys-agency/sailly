@@ -54,3 +54,26 @@
 	-fx-background-image: url('../artefacts/knight.png');
 }
 
+.chess {
+	-fx-background-image: url('../artefacts/chess.png');
+}
+
+.checkMate {
+	-fx-background-image: url('../artefacts/checkMate.png');
+}
+
+.lock {
+	-fx-background-image: url('../artefacts/lock.png');
+		-fx-background-repeat: no-repeat;
+    	-fx-background-position: center;
+    	-fx-background-size: 22px;
+}
+.unlock {
+	-fx-background-image: url('../artefacts/unlock.png');
+		-fx-background-repeat: no-repeat;
+    	-fx-background-position: center;
+    	-fx-background-size: 22px;
+}
+
+
+
