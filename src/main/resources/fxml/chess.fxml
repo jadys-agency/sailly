@@ -12,13 +12,13 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@../../../JavaProject/sailly/src/main/resources/css/main.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.jadys.sailly.ChessController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="925.0" stylesheets="@../css/main.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.jadys.sailly.ChessController">
    <children>
       <HBox alignment="CENTER_LEFT" layoutX="35.0" layoutY="30.0" spacing="25.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <ImageView fitHeight="85.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@Jadys/3x/m3@1x.png" />
+                  <Image url="@../../../../../../Users/Alexandre/Desktop/Jadys/3x/monkey.png" />
                </image>
             </ImageView>
             <VBox alignment="CENTER_LEFT">
@@ -281,12 +281,12 @@
                   </HBox>
                </children>
             </VBox>
-            <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="226.0">
+            <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="745.0" prefWidth="226.0">
                <children>
                   <JFXTextArea fx:id="textMoves" editable="false" minHeight="550.0" prefHeight="550.0" prefWidth="20.0" style="-fx-background-color: E9E9E9; -jfx-focus-color: E9E9E9; -jfx-unfocus-color: E9E9E9;" VBox.vgrow="ALWAYS" />
                </children>
                <padding>
-                  <Insets top="15.0" />
+                  <Insets bottom="25.0" top="15.0" />
                </padding>
             </VBox>
          </children>
@@ -296,6 +296,11 @@
             <Font size="15.0" />
          </font>
       </JFXButton>
+      <Label layoutX="559.0" layoutY="902.0" text="Made by Jadys" textFill="#414141" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <font>
+            <Font name="Century Gothic" size="10.0" />
+         </font>
+      </Label>
    </children>
    <padding>
       <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
