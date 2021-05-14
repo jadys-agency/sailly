@@ -1,4 +1,4 @@
-package fr.jadys.chess;
+package fr.jadys.sailly;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextArea;

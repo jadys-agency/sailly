@@ -4,8 +4,8 @@ plugins {
     id 'com.dua3.javafxgradle7plugin' version '0.0.9'
 }
 
-group 'org.example'
-version '1.0-SNAPSHOT'
+group 'fr.jadys.sailly'
+version '0.1'
 
 javafx {
     version = '16'
@@ -13,8 +13,8 @@ javafx {
 }
 
 application {
-    mainModule = 'fr.jadys.chess'
-    mainClass = 'fr.jadys.chess.Main'
+    mainModule = 'fr.jadys.sailly'
+    mainClass = 'fr.jadys.sailly.Main'
 }
 
 repositories {

@@ -1,4 +1,4 @@
-package fr.jadys.chess;
+package fr.jadys.sailly;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
