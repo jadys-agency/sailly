@@ -4,6 +4,12 @@
 	-fx-background-size: 32px;
 }
 
+.button-delete-with-icon {
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: center;
+	-fx-background-size: 26px;
+}
+
 .button-normal {
 	-fx-background-color: #E9E9E9;
 }
