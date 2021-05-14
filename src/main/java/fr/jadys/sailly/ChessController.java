@@ -86,8 +86,8 @@ public class ChessController {
             m = p.matcher(newValue);
             if (m.matches()) {
                 this.disableAllButtons();
-                this.enableColumnButtons(true);
-                this.buttonX.setDisable(false);
+                 this.enableColumnButtons(true);
+                 this.buttonX.setDisable(false);
                 this.buttonTrash.setDisable(false);
                 return;
             }
