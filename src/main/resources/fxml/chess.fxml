@@ -5,24 +5,58 @@
 <?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@../css/main.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.jadys.sailly.ChessController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@../../../JavaProject/sailly/src/main/resources/css/main.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.jadys.sailly.ChessController">
    <children>
-      <HBox layoutX="-27.0" layoutY="14.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <HBox alignment="CENTER_LEFT" layoutX="35.0" layoutY="30.0" spacing="25.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="85.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Jadys/3x/m3@1x.png" />
+               </image>
+            </ImageView>
+            <VBox alignment="CENTER_LEFT">
+               <children>
+                  <Label text="SAILLY">
+                     <font>
+                        <Font name="Century Gothic" size="21.0" />
+                     </font>
+                  </Label>
+                  <Label text="Chess note-taking software">
+                     <font>
+                        <Font name="Century Gothic" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #E9E9E9;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+         <children>
+            <Label prefHeight="30.0" prefWidth="319.0" text="Pxb2">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+         <padding>
+            <Insets right="20.0" />
+         </padding>
+      </HBox>
+      <HBox layoutX="-27.0" layoutY="14.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="150.0">
          <children>
             <VBox prefHeight="200.0" prefWidth="100.0">
                <children>
                   <HBox alignment="CENTER">
-                     <children>
-                        <Label fx:id="labelMove" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="285.0" text="pxb2">
-                           <font>
-                              <Font size="48.0" />
-                           </font></Label>
-                     </children>
                      <VBox.margin>
                         <Insets bottom="15.0" />
                      </VBox.margin>
@@ -247,13 +281,21 @@
                   </HBox>
                </children>
             </VBox>
-            <VBox minHeight="-Infinity" minWidth="-Infinity" prefWidth="225.0">
+            <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="226.0">
                <children>
-                  <JFXTextArea fx:id="textMoves" editable="false" style="-fx-background-color: E9E9E9; -jfx-focus-color: E9E9E9; -jfx-unfocus-color: E9E9E9;" VBox.vgrow="ALWAYS" />
+                  <JFXTextArea fx:id="textMoves" editable="false" minHeight="550.0" prefHeight="550.0" prefWidth="20.0" style="-fx-background-color: E9E9E9; -jfx-focus-color: E9E9E9; -jfx-unfocus-color: E9E9E9;" VBox.vgrow="ALWAYS" />
                </children>
+               <padding>
+                  <Insets top="15.0" />
+               </padding>
             </VBox>
          </children>
       </HBox>
+      <JFXButton layoutX="552.0" layoutY="14.0" styleClass="button-close" text="X" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
    </children>
    <padding>
       <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
