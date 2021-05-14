@@ -1,42 +1,41 @@
-.simpleButton{
- -fx-background-color:#E9E9E9;
+.button-with-icon {
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: center;
+	-fx-background-size: 32px;
 }
-.cancelButton{
--fx-background-color:#F36F63;
+
+.button-normal {
+	-fx-background-color: #E9E9E9;
 }
-.rook{
-    -fx-background-image: url('../artefacts/rook.png');
-    -fx-background-repeat: no-repeat;
-    -fx-background-position: center;
-    -fx-background-size: 48px;
+
+.button-red {
+	-fx-background-color: #F36F63;
 }
-.pawn{
-    -fx-background-image: url('../artefacts/pawn.png');
-    -fx-background-repeat: no-repeat;
-    -fx-background-position: center;
--fx-background-size: 48px;
+
+.trash {
+	-fx-background-image: url('../artefacts/trash.png');
 }
-.Queen{
-    -fx-background-image: url('../artefacts/queen.png');
-    -fx-background-repeat: no-repeat;
-    -fx-background-position: center;
--fx-background-size: 48px;
+
+.rook {
+	-fx-background-image: url('../artefacts/rook.png');
 }
-.King{
-    -fx-background-image: url('../artefacts/king.png');
-    -fx-background-repeat: no-repeat;
-    -fx-background-position: center;
--fx-background-size: 48px;
+
+.pawn {
+	-fx-background-image: url('../artefacts/pawn.png');
 }
-.bishop{
-    -fx-background-image: url('../artefacts/bishop.png');
-    -fx-background-repeat: no-repeat;
-    -fx-background-position: center;
--fx-background-size: 48px;
+
+.queen {
+	-fx-background-image: url('../artefacts/queen.png');
 }
-.knight{
-    -fx-background-image: url('../artefacts/horse.png');
-    -fx-background-repeat: no-repeat;
-    -fx-background-position: center;
--fx-background-size: 48px;
+
+.king {
+	-fx-background-image: url('../artefacts/king.png');
+}
+
+.bishop {
+	-fx-background-image: url('../artefacts/bishop.png');
+}
+
+.knight {
+	-fx-background-image: url('../artefacts/knight.png');
 }
