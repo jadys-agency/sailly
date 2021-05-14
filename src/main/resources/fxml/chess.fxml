@@ -39,13 +39,18 @@
       </HBox>
       <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #E9E9E9;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
          <children>
-            <Label prefHeight="30.0" prefWidth="319.0" text="Pxb2">
+            <Label prefHeight="30.0" prefWidth="515.0" text="Pxb2">
                <font>
                   <Font size="20.0" />
                </font>
                <HBox.margin>
                   <Insets left="15.0" />
                </HBox.margin>
+            </Label>
+            <Label text="23:02">
+               <font>
+                  <Font size="16.0" />
+               </font>
             </Label>
          </children>
          <padding>
