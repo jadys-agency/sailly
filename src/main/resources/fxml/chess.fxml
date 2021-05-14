@@ -18,7 +18,7 @@
                <children>
                   <HBox alignment="CENTER">
                      <children>
-                        <Label fx:id="labelMove" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="285.0" text="p X B2">
+                        <Label fx:id="labelMove" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="285.0" text="pxb2">
                            <font>
                               <Font size="48.0" />
                            </font></Label>
