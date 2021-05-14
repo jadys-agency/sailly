@@ -289,7 +289,13 @@
             </VBox>
             <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="745.0" prefWidth="226.0">
                <children>
-                  <JFXTextArea fx:id="textMoves" editable="false" minHeight="550.0" prefHeight="550.0" prefWidth="20.0" style="-fx-background-color: E9E9E9; -jfx-focus-color: E9E9E9; -jfx-unfocus-color: E9E9E9;" VBox.vgrow="ALWAYS" />
+                  <JFXTextArea fx:id="textMoves" editable="false" minHeight="550.0" prefHeight="550.0" prefWidth="20.0" style="-fx-background-color: E9E9E9; -jfx-focus-color: E9E9E9; -jfx-unfocus-color: E9E9E9;" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </padding></JFXTextArea>
                </children>
                <padding>
                   <Insets bottom="25.0" top="15.0" />
