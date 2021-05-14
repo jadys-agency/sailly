@@ -214,6 +214,14 @@
                         </VBox>
                         <VBox prefHeight="200.0" prefWidth="100.0">
                            <children>
+                              <JFXButton fx:id="buttonX1" minHeight="-Infinity" minWidth="-Infinity" prefHeight="345.0" prefWidth="75.0" styleClass="button-red" text="X" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </JFXButton>
                               <JFXButton fx:id="buttonX" minHeight="-Infinity" minWidth="-Infinity" prefHeight="345.0" prefWidth="75.0" text=" " textFill="WHITE">
                                  <font>
                                     <Font name="System Bold" size="12.0" />
@@ -223,11 +231,6 @@
                                     <String fx:value="button-delete-with-icon" />
                                     <String fx:value="trash" />
                                  </styleClass>
-                              </JFXButton>
-                              <JFXButton fx:id="buttonX1" minHeight="-Infinity" minWidth="-Infinity" prefHeight="345.0" prefWidth="75.0" styleClass="button-red" text="X" textFill="WHITE">
-                                 <font>
-                                    <Font name="System Bold" size="20.0" />
-                                 </font>
                                  <VBox.margin>
                                     <Insets top="15.0" />
                                  </VBox.margin>
