@@ -2,13 +2,21 @@ package fr.jadys.sailly;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextArea;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class ChessController {
+
+    @Setter
+    private Stage stage;
 
     @FXML
     JFXButton buttonA, buttonB, buttonC, buttonD, buttonE, buttonF, buttonG, buttonH;
@@ -24,46 +32,41 @@ public class ChessController {
     JFXTextArea textMoves;
     @FXML
     Label labelMove;
+    @FXML
+    JFXButton buttonClose;
+    @FXML
+    Pane paneMoveWindow;
+
+    private double xOffset;
+    private double yOffset;
 
     private boolean eraseLabelMove = false;
 
     @FXML
     public void initialize() {
-        buttonKnight.setOnAction(event -> placePiece("N"));
-        buttonRook.setOnAction(event -> placePiece("R"));
-        buttonKing.setOnAction(event -> placePiece("K"));
-        buttonQueen.setOnAction(event -> placePiece("Q"));
-        buttonPawn.setOnAction(event -> placePiece("P"));
-        buttonBishop.setOnAction(event -> placePiece("B"));
+        setActions();
+        setRegex();
+        handleWindowMove();
 
-        buttonOne.setOnAction(event -> appendToLabelMove("1"));
-        buttonTwo.setOnAction(event -> appendToLabelMove("2"));
-        buttonThree.setOnAction(event -> appendToLabelMove("3"));
-        buttonFour.setOnAction(event -> appendToLabelMove("4"));
-        buttonFive.setOnAction(event -> appendToLabelMove("5"));
-        buttonSix.setOnAction(event -> appendToLabelMove("6"));
-        buttonSeven.setOnAction(event -> appendToLabelMove("7"));
-        buttonEight.setOnAction(event -> appendToLabelMove("8"));
-
-        buttonA.setOnAction(event -> appendToLabelMove("a"));
-        buttonB.setOnAction(event -> appendToLabelMove("b"));
-        buttonC.setOnAction(event -> appendToLabelMove("c"));
-        buttonD.setOnAction(event -> appendToLabelMove("d"));
-        buttonE.setOnAction(event -> appendToLabelMove("e"));
-        buttonF.setOnAction(event -> appendToLabelMove("f"));
-        buttonG.setOnAction(event -> appendToLabelMove("g"));
-        buttonH.setOnAction(event -> appendToLabelMove("h"));
-
-        buttonX.setOnAction(event -> appendToLabelMove("x"));
-        buttonTrash.setOnAction(event -> {
-            labelMove.setText("");
-            this.disableAllButtons();
-            this.enablePieceButtons(true);
-        });
+        this.buttonClose.setOnAction(event -> Platform.exit());
 
         this.disableAllButtons();
         this.enablePieceButtons(true);
+    }
 
+    private void handleWindowMove() {
+        paneMoveWindow.setOnMousePressed(event -> {
+            xOffset = event.getSceneX();
+            yOffset = event.getSceneY();
+        });
+
+        paneMoveWindow.setOnMouseDragged(event -> {
+            stage.setX(event.getScreenX() - xOffset);
+            stage.setY(event.getScreenY() - yOffset);
+        });
+    }
+
+    private void setRegex() {
         labelMove.textProperty().addListener((observable, oldValue, newValue) -> {
             Pattern p = Pattern.compile("^[NRKQPB]$");
             Matcher m = p.matcher(newValue);
@@ -123,6 +126,40 @@ public class ChessController {
                 this.enablePieceButtons(true);
                 eraseLabelMove = true;
             }
+        });
+    }
+
+    private void setActions() {
+        buttonKnight.setOnAction(event -> placePiece("N"));
+        buttonRook.setOnAction(event -> placePiece("R"));
+        buttonKing.setOnAction(event -> placePiece("K"));
+        buttonQueen.setOnAction(event -> placePiece("Q"));
+        buttonPawn.setOnAction(event -> placePiece("P"));
+        buttonBishop.setOnAction(event -> placePiece("B"));
+
+        buttonOne.setOnAction(event -> appendToLabelMove("1"));
+        buttonTwo.setOnAction(event -> appendToLabelMove("2"));
+        buttonThree.setOnAction(event -> appendToLabelMove("3"));
+        buttonFour.setOnAction(event -> appendToLabelMove("4"));
+        buttonFive.setOnAction(event -> appendToLabelMove("5"));
+        buttonSix.setOnAction(event -> appendToLabelMove("6"));
+        buttonSeven.setOnAction(event -> appendToLabelMove("7"));
+        buttonEight.setOnAction(event -> appendToLabelMove("8"));
+
+        buttonA.setOnAction(event -> appendToLabelMove("a"));
+        buttonB.setOnAction(event -> appendToLabelMove("b"));
+        buttonC.setOnAction(event -> appendToLabelMove("c"));
+        buttonD.setOnAction(event -> appendToLabelMove("d"));
+        buttonE.setOnAction(event -> appendToLabelMove("e"));
+        buttonF.setOnAction(event -> appendToLabelMove("f"));
+        buttonG.setOnAction(event -> appendToLabelMove("g"));
+        buttonH.setOnAction(event -> appendToLabelMove("h"));
+
+        buttonX.setOnAction(event -> appendToLabelMove("x"));
+        buttonTrash.setOnAction(event -> {
+            labelMove.setText("");
+            this.disableAllButtons();
+            this.enablePieceButtons(true);
         });
     }
 

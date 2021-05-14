@@ -9,6 +9,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
@@ -296,16 +297,17 @@
             </VBox>
          </children>
       </HBox>
-      <JFXButton layoutX="552.0" layoutY="14.0" styleClass="button-close" text="X" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </JFXButton>
       <Label layoutX="559.0" layoutY="902.0" text="Made by Jadys" textFill="#414141" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <font>
             <Font name="Century Gothic" size="10.0" />
          </font>
       </Label>
+      <Pane fx:id="paneMoveWindow" prefHeight="115.0" AnchorPane.leftAnchor="-15.0" AnchorPane.rightAnchor="-15.0" AnchorPane.topAnchor="-15.0" />
+      <JFXButton fx:id="buttonClose" layoutX="552.0" layoutY="14.0" styleClass="button-close" text="X" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
    </children>
    <padding>
       <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
