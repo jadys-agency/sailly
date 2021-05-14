@@ -7,16 +7,12 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-import lombok.Getter;
 import lombok.Setter;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class ChessController {
-
-    @Setter
-    private Stage stage;
 
     @FXML
     JFXButton buttonA, buttonB, buttonC, buttonD, buttonE, buttonF, buttonG, buttonH;
@@ -36,7 +32,8 @@ public class ChessController {
     JFXButton buttonClose;
     @FXML
     Pane paneMoveWindow;
-
+    @Setter
+    private Stage stage;
     private double xOffset;
     private double yOffset;
 
@@ -176,7 +173,7 @@ public class ChessController {
     }
 
     private void appendToTextMoves(String value) {
-        if ( textMoves.getText().isEmpty() ) {
+        if (textMoves.getText().isEmpty()) {
             textMoves.setText(value);
         } else {
             textMoves.setText(textMoves.getText() + "\n" + value);
