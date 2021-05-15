@@ -40,7 +40,7 @@
       </HBox>
       <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #E9E9E9;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
          <children>
-            <Label fx:id="labelMove" prefHeight="30.0" prefWidth="523.0">
+            <Label fx:id="labelMove" prefHeight="30.0" prefWidth="460.0">
                <font>
                   <Font size="20.0" />
                </font>
@@ -384,7 +384,7 @@
                   </HBox>
                </children>
             </VBox>
-            <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="745.0" prefWidth="226.0">
+            <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="746.0" prefWidth="150.0">
                <children>
                   <JFXTextArea fx:id="textMoves" editable="false" minHeight="550.0" prefHeight="550.0" prefWidth="20.0" style="-fx-background-color: E9E9E9; -jfx-focus-color: E9E9E9; -jfx-unfocus-color: E9E9E9;" VBox.vgrow="ALWAYS">
                      <font>
