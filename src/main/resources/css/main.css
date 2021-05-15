@@ -1,3 +1,7 @@
+.no-focus {
+    -jfx-disable-visual-focus: true;
+}
+
 .button-with-icon {
 	-fx-background-repeat: no-repeat;
 	-fx-background-position: center;

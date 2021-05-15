@@ -50,8 +50,7 @@ public class ChessController {
 
         this.disableAllButtons();
         this.enablePieceButtons(true);
-        this.buttonLargeCastling.setDisable(false);
-        this.buttonSmallCastling.setDisable(false);
+        this.enableCastlingButtons(true);
     }
 
     private void handleWindowMove() {
@@ -126,9 +125,8 @@ public class ChessController {
                 this.enablePieceButtons(true);
                 this.buttonChess.setDisable(false);
                 this.buttonCheckMate.setDisable(false);
+                this.enableCastlingButtons(false);
                 this.eraseLabelMove = true;
-                this.buttonLargeCastling.setDisable(false);
-                this.buttonSmallCastling.setDisable(false);
                 return;
             }
 
@@ -138,9 +136,8 @@ public class ChessController {
                 this.disableAllButtons();
                 this.enablePieceButtons(true);
                 this.buttonCheckMate.setDisable(false);
+                this.enableCastlingButtons(false);
                 this.eraseLabelMove = true;
-                this.buttonLargeCastling.setDisable(false);
-                this.buttonSmallCastling.setDisable(false);
                 return;
             }
 
@@ -149,9 +146,8 @@ public class ChessController {
             if (m.matches()) {
                 this.disableAllButtons();
                 this.enablePieceButtons(true);
+                this.enableCastlingButtons(false);
                 this.eraseLabelMove = true;
-                this.buttonLargeCastling.setDisable(false);
-                this.buttonSmallCastling.setDisable(false);
                 return;
             }
 
@@ -161,9 +157,8 @@ public class ChessController {
                 this.appendToTextMoves(this.labelMove.getText());
                 this.disableAllButtons();
                 this.enablePieceButtons(true);
+                this.enableCastlingButtons(false);
                 this.eraseLabelMove = true;
-                this.buttonLargeCastling.setDisable(false);
-                this.buttonSmallCastling.setDisable(false);
                 return;
             }
         });
@@ -210,8 +205,7 @@ public class ChessController {
             this.appendToLabelMove("O - O");
             this.disableAllButtons();
             this.enablePieceButtons(true);
-            this.buttonLargeCastling.setDisable(false);
-            this.buttonSmallCastling.setDisable(false);
+            this.enableCastlingButtons(false);
 
         });
 
@@ -306,10 +300,10 @@ public class ChessController {
         this.enablePieceButtons(false);
         this.enableRowButtons(false);
         this.enableColumnButtons(false);
-        this.buttonX.setDisable(false);
-        this.buttonTrash.setDisable(false);
-        this.buttonCheckMate.setDisable(false);
-        this.buttonChess.setDisable(false);
+        this.buttonX.setDisable(true);
+        this.buttonTrash.setDisable(true);
+        this.buttonCheckMate.setDisable(true);
+        this.buttonChess.setDisable(true);
     }
 
 }

@@ -53,6 +53,7 @@
                   <String fx:value="button-normal" />
                   <String fx:value="button-with-icon" />
                   <String fx:value="checkMate" />
+                  <String fx:value="no-focus" />
                </styleClass>
             </JFXButton>
          </children>
@@ -83,6 +84,7 @@
                                           <String fx:value="button-normal" />
                                           <String fx:value="button-with-icon" />
                                           <String fx:value="pawn" />
+                                          <String fx:value="no-focus" />
                                        </styleClass></JFXButton>
                                     <JFXButton fx:id="buttonRook" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="75.0" text=" ">
                                        <font>
@@ -92,6 +94,7 @@
                                           <String fx:value="button-normal" />
                                           <String fx:value="button-with-icon" />
                                           <String fx:value="rook" />
+                                          <String fx:value="no-focus" />
                                        </styleClass></JFXButton>
                                     <JFXButton fx:id="buttonKnight" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="75.0" text=" ">
                                        <font>
@@ -101,6 +104,7 @@
                                           <String fx:value="button-normal" />
                                           <String fx:value="button-with-icon" />
                                           <String fx:value="knight" />
+                                          <String fx:value="no-focus" />
                                        </styleClass></JFXButton>
                                  </children>
                                  <VBox.margin>
@@ -117,6 +121,7 @@
                                           <String fx:value="button-normal" />
                                           <String fx:value="button-with-icon" />
                                           <String fx:value="bishop" />
+                                          <String fx:value="no-focus" />
                                        </styleClass></JFXButton>
                                     <JFXButton fx:id="buttonQueen" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="75.0" text=" ">
                                        <font>
@@ -126,6 +131,7 @@
                                           <String fx:value="button-normal" />
                                           <String fx:value="button-with-icon" />
                                           <String fx:value="queen" />
+                                          <String fx:value="no-focus" />
                                        </styleClass></JFXButton>
                                     <JFXButton fx:id="buttonKing" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="75.0" text=" ">
                                        <font>
@@ -135,6 +141,7 @@
                                           <String fx:value="button-normal" />
                                           <String fx:value="button-with-icon" />
                                           <String fx:value="king" />
+                                          <String fx:value="no-focus" />
                                        </styleClass></JFXButton>
                                  </children>
                                  <VBox.margin>
@@ -143,18 +150,30 @@
                               </HBox>
                               <HBox spacing="15.0">
                                  <children>
-                                    <JFXButton fx:id="buttonA" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="75.0" styleClass="button-normal" text="A">
+                                    <JFXButton fx:id="buttonA" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="75.0" text="A">
                                        <font>
                                           <Font name="System Bold" size="20.0" />
-                                       </font></JFXButton>
-                                    <JFXButton fx:id="buttonB" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="75.0" styleClass="button-normal" text="B">
+                                       </font>
+                                       <styleClass>
+                                          <String fx:value="button-normal" />
+                                          <String fx:value="no-focus" />
+                                       </styleClass></JFXButton>
+                                    <JFXButton fx:id="buttonB" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="75.0" text="B">
                                        <font>
                                           <Font name="System Bold" size="20.0" />
-                                       </font></JFXButton>
-                                    <JFXButton fx:id="buttonC" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="75.0" styleClass="button-normal" text="C">
+                                       </font>
+                                       <styleClass>
+                                          <String fx:value="button-normal" />
+                                          <String fx:value="no-focus" />
+                                       </styleClass></JFXButton>
+                                    <JFXButton fx:id="buttonC" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="75.0" text="C">
                                        <font>
                                           <Font name="System Bold" size="20.0" />
-                                       </font></JFXButton>
+                                       </font>
+                                       <styleClass>
+                                          <String fx:value="button-normal" />
+                                          <String fx:value="no-focus" />
+                                       </styleClass></JFXButton>
                                  </children>
                                  <VBox.margin>
                                     <Insets bottom="15.0" />
@@ -162,18 +181,30 @@
                               </HBox>
                               <HBox spacing="15.0">
                                  <children>
-                                    <JFXButton fx:id="buttonD" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="75.0" styleClass="button-normal" text="D">
+                                    <JFXButton fx:id="buttonD" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="75.0" text="D">
                                        <font>
                                           <Font name="System Bold" size="20.0" />
-                                       </font></JFXButton>
-                                    <JFXButton fx:id="buttonE" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="75.0" styleClass="button-normal" text="E">
+                                       </font>
+                                       <styleClass>
+                                          <String fx:value="button-normal" />
+                                          <String fx:value="no-focus" />
+                                       </styleClass></JFXButton>
+                                    <JFXButton fx:id="buttonE" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="75.0" text="E">
                                        <font>
                                           <Font name="System Bold" size="20.0" />
-                                       </font></JFXButton>
-                                    <JFXButton fx:id="buttonF" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="75.0" styleClass="button-normal" text="F">
+                                       </font>
+                                       <styleClass>
+                                          <String fx:value="button-normal" />
+                                          <String fx:value="no-focus" />
+                                       </styleClass></JFXButton>
+                                    <JFXButton fx:id="buttonF" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="75.0" text="F">
                                        <font>
                                           <Font name="System Bold" size="20.0" />
-                                       </font></JFXButton>
+                                       </font>
+                                       <styleClass>
+                                          <String fx:value="button-normal" />
+                                          <String fx:value="no-focus" />
+                                       </styleClass></JFXButton>
                                  </children>
                                  <VBox.margin>
                                     <Insets bottom="15.0" />
@@ -181,18 +212,30 @@
                               </HBox>
                               <HBox spacing="15.0">
                                  <children>
-                                    <JFXButton fx:id="buttonG" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="75.0" styleClass="button-normal" text="G">
+                                    <JFXButton fx:id="buttonG" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="75.0" text="G">
                                        <font>
                                           <Font name="System Bold" size="20.0" />
-                                       </font></JFXButton>
-                                    <JFXButton fx:id="buttonH" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="75.0" styleClass="button-normal" text="H">
+                                       </font>
+                                       <styleClass>
+                                          <String fx:value="button-normal" />
+                                          <String fx:value="no-focus" />
+                                       </styleClass></JFXButton>
+                                    <JFXButton fx:id="buttonH" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="75.0" text="H">
                                        <font>
                                           <Font name="System Bold" size="20.0" />
-                                       </font></JFXButton>
-                                    <JFXButton fx:id="buttonOne" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="75.0" styleClass="button-normal" text="1">
+                                       </font>
+                                       <styleClass>
+                                          <String fx:value="button-normal" />
+                                          <String fx:value="no-focus" />
+                                       </styleClass></JFXButton>
+                                    <JFXButton fx:id="buttonOne" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="75.0" text="1">
                                        <font>
                                           <Font name="System Bold" size="20.0" />
-                                       </font></JFXButton>
+                                       </font>
+                                       <styleClass>
+                                          <String fx:value="button-normal" />
+                                          <String fx:value="no-focus" />
+                                       </styleClass></JFXButton>
                                  </children>
                                  <VBox.margin>
                                     <Insets bottom="15.0" />
@@ -200,18 +243,30 @@
                               </HBox>
                               <HBox spacing="15.0">
                                  <children>
-                                    <JFXButton fx:id="buttonTwo" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="75.0" styleClass="button-normal" text="2">
+                                    <JFXButton fx:id="buttonTwo" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="75.0" text="2">
                                        <font>
                                           <Font name="System Bold" size="20.0" />
-                                       </font></JFXButton>
-                                    <JFXButton fx:id="buttonThree" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="75.0" styleClass="button-normal" text="3">
+                                       </font>
+                                       <styleClass>
+                                          <String fx:value="button-normal" />
+                                          <String fx:value="no-focus" />
+                                       </styleClass></JFXButton>
+                                    <JFXButton fx:id="buttonThree" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="75.0" text="3">
                                        <font>
                                           <Font name="System Bold" size="20.0" />
-                                       </font></JFXButton>
-                                    <JFXButton fx:id="buttonFour" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="75.0" styleClass="button-normal" text="4">
+                                       </font>
+                                       <styleClass>
+                                          <String fx:value="button-normal" />
+                                          <String fx:value="no-focus" />
+                                       </styleClass></JFXButton>
+                                    <JFXButton fx:id="buttonFour" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="75.0" text="4">
                                        <font>
                                           <Font name="System Bold" size="20.0" />
-                                       </font></JFXButton>
+                                       </font>
+                                       <styleClass>
+                                          <String fx:value="button-normal" />
+                                          <String fx:value="no-focus" />
+                                       </styleClass></JFXButton>
                                  </children>
                                  <VBox.margin>
                                     <Insets bottom="15.0" />
@@ -219,18 +274,30 @@
                               </HBox>
                               <HBox spacing="15.0">
                                  <children>
-                                    <JFXButton fx:id="buttonFive" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="75.0" styleClass="button-normal" text="5">
+                                    <JFXButton fx:id="buttonFive" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="75.0" text="5">
                                        <font>
                                           <Font name="System Bold" size="20.0" />
-                                       </font></JFXButton>
-                                    <JFXButton fx:id="buttonSix" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="75.0" styleClass="button-normal" text="6">
+                                       </font>
+                                       <styleClass>
+                                          <String fx:value="button-normal" />
+                                          <String fx:value="no-focus" />
+                                       </styleClass></JFXButton>
+                                    <JFXButton fx:id="buttonSix" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="75.0" text="6">
                                        <font>
                                           <Font name="System Bold" size="20.0" />
-                                       </font></JFXButton>
-                                    <JFXButton fx:id="buttonSeven" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="75.0" styleClass="button-normal" text="7">
+                                       </font>
+                                       <styleClass>
+                                          <String fx:value="button-normal" />
+                                          <String fx:value="no-focus" />
+                                       </styleClass></JFXButton>
+                                    <JFXButton fx:id="buttonSeven" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="75.0" text="7">
                                        <font>
                                           <Font name="System Bold" size="20.0" />
-                                       </font></JFXButton>
+                                       </font>
+                                       <styleClass>
+                                          <String fx:value="button-normal" />
+                                          <String fx:value="no-focus" />
+                                       </styleClass></JFXButton>
                                  </children>
                                  <VBox.margin>
                                     <Insets bottom="15.0" />
@@ -238,31 +305,47 @@
                               </HBox>
                               <HBox spacing="15.0">
                                  <children>
-                                    <JFXButton fx:id="buttonEight" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="75.0" styleClass="button-normal" text="8">
+                                    <JFXButton fx:id="buttonEight" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="75.0" text="8">
                                        <font>
                                           <Font name="System Bold" size="20.0" />
-                                       </font></JFXButton>
-                                    <JFXButton fx:id="buttonSmallCastling" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="75.0" styleClass="button-normal" text="O - O">
+                                       </font>
+                                       <styleClass>
+                                          <String fx:value="button-normal" />
+                                          <String fx:value="no-focus" />
+                                       </styleClass></JFXButton>
+                                    <JFXButton fx:id="buttonSmallCastling" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="75.0" text="O - O">
                                        <font>
                                           <Font name="System Bold" size="13.0" />
-                                       </font></JFXButton>
-                                    <JFXButton fx:id="buttonLargeCastling" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="75.0" styleClass="button-normal" text="O - O - O">
+                                       </font>
+                                       <styleClass>
+                                          <String fx:value="button-normal" />
+                                          <String fx:value="no-focus" />
+                                       </styleClass></JFXButton>
+                                    <JFXButton fx:id="buttonLargeCastling" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="75.0" text="O - O - O">
                                        <font>
                                           <Font name="System Bold" size="13.0" />
-                                       </font></JFXButton>
+                                       </font>
+                                       <styleClass>
+                                          <String fx:value="button-normal" />
+                                          <String fx:value="no-focus" />
+                                       </styleClass></JFXButton>
                                  </children>
                               </HBox>
                            </children>
                         </VBox>
                         <VBox prefHeight="200.0" prefWidth="100.0">
                            <children>
-                              <JFXButton fx:id="buttonX" minHeight="-Infinity" minWidth="-Infinity" prefHeight="165.0" prefWidth="75.0" styleClass="button-red" text="X" textFill="WHITE">
+                              <JFXButton fx:id="buttonX" minHeight="-Infinity" minWidth="-Infinity" prefHeight="165.0" prefWidth="75.0" text="X" textFill="WHITE">
                                  <font>
                                     <Font name="System Bold" size="20.0" />
                                  </font>
                                  <VBox.margin>
                                     <Insets />
                                  </VBox.margin>
+                                 <styleClass>
+                                    <String fx:value="button-red" />
+                                    <String fx:value="no-focus" />
+                                 </styleClass>
                               </JFXButton>
                               <JFXButton fx:id="buttonTrash" minHeight="-Infinity" minWidth="-Infinity" prefHeight="345.0" prefWidth="75.0" text=" " textFill="WHITE">
                                  <font>
@@ -272,6 +355,7 @@
                                     <String fx:value="button-red" />
                                     <String fx:value="button-delete-with-icon" />
                                     <String fx:value="trash" />
+                                    <String fx:value="no-focus" />
                                  </styleClass>
                                  <VBox.margin>
                                     <Insets top="15.0" />
@@ -285,6 +369,7 @@
                                     <String fx:value="button-with-icon" />
                                     <String fx:value="button-normal" />
                                     <String fx:value="chess" />
+                                    <String fx:value="no-focus" />
                                  </styleClass>
                               </JFXButton>
                            </children>
@@ -328,12 +413,17 @@
          <styleClass>
             <String fx:value="unlock" />
             <String fx:value="button-normal" />
+            <String fx:value="no-focus" />
          </styleClass>
       </JFXButton>
-      <JFXButton fx:id="buttonClose" layoutX="552.0" layoutY="14.0" prefHeight="32.0" prefWidth="32.0" styleClass="button-close" text="X" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <JFXButton fx:id="buttonClose" layoutX="552.0" layoutY="14.0" prefHeight="32.0" prefWidth="32.0" text="X" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <font>
             <Font size="15.0" />
          </font>
+         <styleClass>
+            <String fx:value="button-close" />
+            <String fx:value="no-focus" />
+         </styleClass>
       </JFXButton>
    </children>
    <padding>
