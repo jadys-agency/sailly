@@ -15,27 +15,26 @@ import java.util.regex.Pattern;
 public class ChessController {
 
     @FXML
-    JFXButton buttonA, buttonB, buttonC, buttonD, buttonE, buttonF, buttonG, buttonH;
+    private JFXButton buttonA, buttonB, buttonC, buttonD, buttonE, buttonF, buttonG, buttonH;
     @FXML
-    JFXButton buttonOne, buttonTwo, buttonThree, buttonFour, buttonFive, buttonSix, buttonSeven, buttonEight;
+    private JFXButton buttonOne, buttonTwo, buttonThree, buttonFour, buttonFive, buttonSix, buttonSeven, buttonEight;
     @FXML
-    JFXButton buttonPawn, buttonBishop, buttonKnight, buttonRook, buttonQueen, buttonKing;
+    private JFXButton buttonPawn, buttonBishop, buttonKnight, buttonRook, buttonQueen, buttonKing;
     @FXML
-    JFXButton buttonSmallCastling, buttonLargeCastling;
+    private JFXButton buttonSmallCastling, buttonLargeCastling;
     @FXML
-    JFXButton buttonX, buttonTrash;
+    private JFXButton buttonX, buttonTrash;
     @FXML
-    JFXTextArea textMoves;
+    private JFXButton buttonCheckMate, buttonChess;
     @FXML
-    Label labelMove;
+    private JFXTextArea textMoves;
     @FXML
-    JFXButton buttonClose;
+    private Label labelMove;
     @FXML
-    JFXButton buttonLock;
+    private JFXButton buttonClose, buttonLock;
     @FXML
-    Pane paneMoveWindow;
-    @FXML
-    JFXButton buttonCheckMate, buttonChess;
+    private Pane paneMoveWindow;
+
     @Setter
     private Stage stage;
     private double xOffset;
@@ -45,11 +44,9 @@ public class ChessController {
 
     @FXML
     public void initialize() {
-        setActions();
-        setRegex();
-        handleWindowMove();
-
-        this.buttonClose.setOnAction(event -> Platform.exit());
+        this.setActions();
+        this.setRegex();
+        this.handleWindowMove();
 
         this.disableAllButtons();
         this.enablePieceButtons(true);
@@ -58,14 +55,14 @@ public class ChessController {
     }
 
     private void handleWindowMove() {
-        paneMoveWindow.setOnMousePressed(event -> {
-            xOffset = event.getSceneX();
-            yOffset = event.getSceneY();
+        this.paneMoveWindow.setOnMousePressed(event -> {
+            this.xOffset = event.getSceneX();
+            this.yOffset = event.getSceneY();
         });
 
-        paneMoveWindow.setOnMouseDragged(event -> {
-            stage.setX(event.getScreenX() - xOffset);
-            stage.setY(event.getScreenY() - yOffset);
+        this.paneMoveWindow.setOnMouseDragged(event -> {
+            this.stage.setX(event.getScreenX() - this.xOffset);
+            this.stage.setY(event.getScreenY() - this.yOffset);
         });
     }
 
@@ -86,8 +83,8 @@ public class ChessController {
             m = p.matcher(newValue);
             if (m.matches()) {
                 this.disableAllButtons();
-                 this.enableColumnButtons(true);
-                 this.buttonX.setDisable(false);
+                this.enableColumnButtons(true);
+                this.buttonX.setDisable(false);
                 this.buttonTrash.setDisable(false);
                 return;
             }
@@ -124,10 +121,35 @@ public class ChessController {
             p = Pattern.compile("^[NRKQPB]([abcdefgh]|[0-8])?x?[abcdefgh][0-8]$");
             m = p.matcher(newValue);
             if (m.matches()) {
-                appendToTextMoves(this.labelMove.getText());
+                this.appendToTextMoves(this.labelMove.getText());
                 this.disableAllButtons();
                 this.enablePieceButtons(true);
-                eraseLabelMove = true;
+                this.buttonChess.setDisable(false);
+                this.buttonCheckMate.setDisable(false);
+                this.eraseLabelMove = true;
+                this.buttonLargeCastling.setDisable(false);
+                this.buttonSmallCastling.setDisable(false);
+                return;
+            }
+
+            p = Pattern.compile("^[NRKQPB]([abcdefgh]|[0-8])?x?[abcdefgh][0-8]\\+$");
+            m = p.matcher(newValue);
+            if (m.matches()) {
+                this.disableAllButtons();
+                this.enablePieceButtons(true);
+                this.buttonCheckMate.setDisable(false);
+                this.eraseLabelMove = true;
+                this.buttonLargeCastling.setDisable(false);
+                this.buttonSmallCastling.setDisable(false);
+                return;
+            }
+
+            p = Pattern.compile("^[NRKQPB]([abcdefgh]|[0-8])?x?[abcdefgh][0-8]\\+?#$");
+            m = p.matcher(newValue);
+            if (m.matches()) {
+                this.disableAllButtons();
+                this.enablePieceButtons(true);
+                this.eraseLabelMove = true;
                 this.buttonLargeCastling.setDisable(false);
                 this.buttonSmallCastling.setDisable(false);
                 return;
@@ -136,10 +158,10 @@ public class ChessController {
             p = Pattern.compile("^(O - O)|(O - O - O)$");
             m = p.matcher(newValue);
             if (m.matches()) {
-                appendToTextMoves(this.labelMove.getText());
+                this.appendToTextMoves(this.labelMove.getText());
                 this.disableAllButtons();
                 this.enablePieceButtons(true);
-                eraseLabelMove = true;
+                this.eraseLabelMove = true;
                 this.buttonLargeCastling.setDisable(false);
                 this.buttonSmallCastling.setDisable(false);
                 return;
@@ -148,44 +170,44 @@ public class ChessController {
     }
 
     private void setActions() {
-        buttonKnight.setOnAction(event -> placePiece("N"));
-        buttonRook.setOnAction(event -> placePiece("R"));
-        buttonKing.setOnAction(event -> placePiece("K"));
-        buttonQueen.setOnAction(event -> placePiece("Q"));
-        buttonPawn.setOnAction(event -> placePiece("P"));
-        buttonBishop.setOnAction(event -> placePiece("B"));
+        this.buttonKnight.setOnAction(event -> placePiece("N"));
+        this.buttonRook.setOnAction(event -> placePiece("R"));
+        this.buttonKing.setOnAction(event -> placePiece("K"));
+        this.buttonQueen.setOnAction(event -> placePiece("Q"));
+        this.buttonPawn.setOnAction(event -> placePiece("P"));
+        this.buttonBishop.setOnAction(event -> placePiece("B"));
 
-        buttonOne.setOnAction(event -> appendToLabelMove("1"));
-        buttonTwo.setOnAction(event -> appendToLabelMove("2"));
-        buttonThree.setOnAction(event -> appendToLabelMove("3"));
-        buttonFour.setOnAction(event -> appendToLabelMove("4"));
-        buttonFive.setOnAction(event -> appendToLabelMove("5"));
-        buttonSix.setOnAction(event -> appendToLabelMove("6"));
-        buttonSeven.setOnAction(event -> appendToLabelMove("7"));
-        buttonEight.setOnAction(event -> appendToLabelMove("8"));
+        this.buttonOne.setOnAction(event -> appendToLabelMove("1"));
+        this.buttonTwo.setOnAction(event -> appendToLabelMove("2"));
+        this.buttonThree.setOnAction(event -> appendToLabelMove("3"));
+        this.buttonFour.setOnAction(event -> appendToLabelMove("4"));
+        this.buttonFive.setOnAction(event -> appendToLabelMove("5"));
+        this.buttonSix.setOnAction(event -> appendToLabelMove("6"));
+        this.buttonSeven.setOnAction(event -> appendToLabelMove("7"));
+        this.buttonEight.setOnAction(event -> appendToLabelMove("8"));
 
-        buttonA.setOnAction(event -> appendToLabelMove("a"));
-        buttonB.setOnAction(event -> appendToLabelMove("b"));
-        buttonC.setOnAction(event -> appendToLabelMove("c"));
-        buttonD.setOnAction(event -> appendToLabelMove("d"));
-        buttonE.setOnAction(event -> appendToLabelMove("e"));
-        buttonF.setOnAction(event -> appendToLabelMove("f"));
-        buttonG.setOnAction(event -> appendToLabelMove("g"));
-        buttonH.setOnAction(event -> appendToLabelMove("h"));
+        this.buttonA.setOnAction(event -> appendToLabelMove("a"));
+        this.buttonB.setOnAction(event -> appendToLabelMove("b"));
+        this.buttonC.setOnAction(event -> appendToLabelMove("c"));
+        this.buttonD.setOnAction(event -> appendToLabelMove("d"));
+        this.buttonE.setOnAction(event -> appendToLabelMove("e"));
+        this.buttonF.setOnAction(event -> appendToLabelMove("f"));
+        this.buttonG.setOnAction(event -> appendToLabelMove("g"));
+        this.buttonH.setOnAction(event -> appendToLabelMove("h"));
 
-        buttonChess.setOnAction(event -> {
-            appendToLabelMove("+");
+        this.buttonChess.setOnAction(event -> {
+            this.appendToLabelMove("+");
             this.textMoves.setText(this.textMoves.getText().substring(0, this.textMoves.getLength()) + "+");
         });
 
-        buttonCheckMate.setOnAction(event -> {
-            appendToLabelMove("#");
+        this.buttonCheckMate.setOnAction(event -> {
+            this.appendToLabelMove("#");
             this.textMoves.setText(this.textMoves.getText().substring(0, this.textMoves.getLength()) + "#");
         });
 
-        buttonSmallCastling.setOnAction(event -> {
-            labelMove.setText("");
-            appendToLabelMove("O - O");
+        this.buttonSmallCastling.setOnAction(event -> {
+            this.labelMove.setText("");
+            this.appendToLabelMove("O - O");
             this.disableAllButtons();
             this.enablePieceButtons(true);
             this.buttonLargeCastling.setDisable(false);
@@ -193,107 +215,101 @@ public class ChessController {
 
         });
 
-        buttonLargeCastling.setOnAction(event -> {
-            labelMove.setText("");
-            appendToLabelMove("O - O - O");
+        this.buttonLargeCastling.setOnAction(event -> {
+            this.labelMove.setText("");
+            this.appendToLabelMove("O - O - O");
             this.disableAllButtons();
             this.enablePieceButtons(true);
-            this.buttonLargeCastling.setDisable(false);
-            this.buttonSmallCastling.setDisable(false);
+            this.enableCastlingButtons(false);
         });
 
-        buttonX.setOnAction(event -> appendToLabelMove("x"));
-        buttonTrash.setOnAction(event -> {
-            labelMove.setText("");
+        this.buttonX.setOnAction(event -> appendToLabelMove("x"));
+        this.buttonTrash.setOnAction(event -> {
+            this.labelMove.setText("");
             this.disableAllButtons();
             this.enablePieceButtons(true);
         });
 
-        buttonLock.setOnAction(event -> {
-            if (stage.isAlwaysOnTop()) {
-                stage.setAlwaysOnTop(false);
-                buttonLock.getStyleClass().remove("lock");
-                buttonLock.getStyleClass().add("unlock");
+        this.buttonLock.setOnAction(event -> {
+            if (this.stage.isAlwaysOnTop()) {
+                this.stage.setAlwaysOnTop(false);
+                this.buttonLock.getStyleClass().remove("lock");
+                this.buttonLock.getStyleClass().add("unlock");
             } else {
-                stage.setAlwaysOnTop(true);
-                buttonLock.getStyleClass().remove("unlock");
-                buttonLock.getStyleClass().add("lock");
+                this.stage.setAlwaysOnTop(true);
+                this.buttonLock.getStyleClass().remove("unlock");
+                this.buttonLock.getStyleClass().add("lock");
             }
         });
+
+        this.buttonClose.setOnAction(event -> Platform.exit());
     }
 
     private void placePiece(String piece) {
-        if (eraseLabelMove) {
+        if (this.eraseLabelMove) {
             this.labelMove.setText("");
-            eraseLabelMove = false;
+            this.eraseLabelMove = false;
         }
-        appendToLabelMove(piece);
+        this.appendToLabelMove(piece);
     }
 
     private void appendToLabelMove(String value) {
-        labelMove.setText(labelMove.getText() + value);
+        this.labelMove.setText(this.labelMove.getText() + value);
     }
 
     private void appendToTextMoves(String value) {
-        if (textMoves.getText().isEmpty()) {
-            textMoves.setText(value);
+        if (this.textMoves.getText().isEmpty()) {
+            this.textMoves.setText(value);
         } else {
-            textMoves.setText(textMoves.getText() + "\n" + value);
+            this.textMoves.setText(this.textMoves.getText() + "\n" + value);
         }
     }
 
     private void enableColumnButtons(boolean enabled) {
-        buttonA.setDisable(!enabled);
-        buttonB.setDisable(!enabled);
-        buttonC.setDisable(!enabled);
-        buttonD.setDisable(!enabled);
-        buttonE.setDisable(!enabled);
-        buttonF.setDisable(!enabled);
-        buttonG.setDisable(!enabled);
-        buttonH.setDisable(!enabled);
+        this.buttonA.setDisable(!enabled);
+        this.buttonB.setDisable(!enabled);
+        this.buttonC.setDisable(!enabled);
+        this.buttonD.setDisable(!enabled);
+        this.buttonE.setDisable(!enabled);
+        this.buttonF.setDisable(!enabled);
+        this.buttonG.setDisable(!enabled);
+        this.buttonH.setDisable(!enabled);
     }
 
     private void enableRowButtons(boolean enabled) {
-        buttonOne.setDisable(!enabled);
-        buttonTwo.setDisable(!enabled);
-        buttonThree.setDisable(!enabled);
-        buttonFour.setDisable(!enabled);
-        buttonFive.setDisable(!enabled);
-        buttonSix.setDisable(!enabled);
-        buttonSeven.setDisable(!enabled);
-        buttonEight.setDisable(!enabled);
+        this.buttonOne.setDisable(!enabled);
+        this.buttonTwo.setDisable(!enabled);
+        this.buttonThree.setDisable(!enabled);
+        this.buttonFour.setDisable(!enabled);
+        this.buttonFive.setDisable(!enabled);
+        this.buttonSix.setDisable(!enabled);
+        this.buttonSeven.setDisable(!enabled);
+        this.buttonEight.setDisable(!enabled);
     }
 
     private void enablePieceButtons(boolean enabled) {
-        buttonPawn.setDisable(!enabled);
-        buttonBishop.setDisable(!enabled);
-        buttonQueen.setDisable(!enabled);
-        buttonKing.setDisable(!enabled);
-        buttonKnight.setDisable(!enabled);
-        buttonRook.setDisable(!enabled);
+        this.buttonPawn.setDisable(!enabled);
+        this.buttonBishop.setDisable(!enabled);
+        this.buttonQueen.setDisable(!enabled);
+        this.buttonKing.setDisable(!enabled);
+        this.buttonKnight.setDisable(!enabled);
+        this.buttonRook.setDisable(!enabled);
     }
 
     private void enableCastlingButtons(boolean enabled) {
-        buttonSmallCastling.setDisable(!enabled);
-        buttonLargeCastling.setDisable(!enabled);
+        this.buttonSmallCastling.setDisable(!enabled);
+        this.buttonLargeCastling.setDisable(!enabled);
     }
 
     private void disableAllButtons() {
-        enableCastlingButtons(false);
-        enablePieceButtons(false);
-        enableRowButtons(false);
-        enableColumnButtons(false);
-        buttonX.setDisable(true);
-        buttonTrash.setDisable(true);
-    }
-
-    private void enableAllButtons() {
-        enableCastlingButtons(false);
-        enablePieceButtons(false);
-        enableRowButtons(false);
-        enableColumnButtons(false);
-        buttonX.setDisable(true);
-        buttonTrash.setDisable(true);
+        this.enableCastlingButtons(false);
+        this.enablePieceButtons(false);
+        this.enableRowButtons(false);
+        this.enableColumnButtons(false);
+        this.buttonX.setDisable(false);
+        this.buttonTrash.setDisable(false);
+        this.buttonCheckMate.setDisable(false);
+        this.buttonChess.setDisable(false);
     }
 
 }

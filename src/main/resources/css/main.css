@@ -60,20 +60,21 @@
 
 .checkMate {
 	-fx-background-image: url('../artefacts/checkMate.png');
+	-fx-background-size: 28px;
 }
 
 .lock {
 	-fx-background-image: url('../artefacts/lock.png');
 	-fx-background-repeat: no-repeat;
     -fx-background-position: center;
-    -fx-background-size: 22px;
+    -fx-background-size: 20px;
 }
 
 .unlock {
 	-fx-background-image: url('../artefacts/unlock.png');
 	-fx-background-repeat: no-repeat;
     -fx-background-position: center;
-    -fx-background-size: 22px;
+    -fx-background-size: 20px;
 }
 
 

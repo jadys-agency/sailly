@@ -16,19 +16,23 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
+        // Chargement du fichier FXML
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(getClass().getResource("/fxml/chess.fxml"));
         fxmlLoader.load();
 
+        // Récupération du contrôleur
         ChessController controller = fxmlLoader.getController();
         controller.setStage(primaryStage);
 
+        // Création de la scène
         Parent parent = fxmlLoader.getRoot();
         Scene scene = new Scene(parent);
         scene.setFill(Color.TRANSPARENT);
         parent.setStyle("-fx-background-radius: 5px;");
-        primaryStage.setScene(scene);
 
+        // Affichage de la fenêtre
+        primaryStage.setScene(scene);
         primaryStage.initStyle(StageStyle.TRANSPARENT);
         primaryStage.show();
     }
