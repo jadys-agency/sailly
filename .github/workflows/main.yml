@@ -23,6 +23,8 @@ jobs:
         run: ./gradlew build
       - name: Create custom JVM with jlink
         run: ./gradlew jlink
+      - name: Create EXE with launch4j
+        run: ./gradlew createExe
       - name: Preparation for archiving
         run: |
           sleep 15
