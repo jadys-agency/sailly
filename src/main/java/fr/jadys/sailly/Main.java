@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -32,6 +33,7 @@ public class Main extends Application {
         parent.setStyle("-fx-background-radius: 5px;");
 
         // Affichage de la fenêtre
+        primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("/artefacts/icon.png")));
         primaryStage.setScene(scene);
         primaryStage.initStyle(StageStyle.TRANSPARENT);
         primaryStage.show();

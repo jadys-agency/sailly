@@ -21,6 +21,7 @@ application {
 
 launch4j {
     mainClassName = 'fr.jadys.sailly.Main'
+    icon = "${projectDir}/src/main/resources/artefacts/ico/icon.ico"
     bundledJrePath = 'jre'
 }
 
