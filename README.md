@@ -7,7 +7,7 @@
 
 Sailly est un projet open source permettant la prise de notes selon la notation algébrique simplifiée pour le jeu des échecs. La solution est développée autour de Java et utilise la plateforme d'application client [JavaFX](https://openjfx.io/) ainsi que la bibliothèque [JFoenix](https://github.com/sshahine/JFoenix) pour la partie graphique.
 
-Initialement conçu pour les personnes atteintes de la [maladie  de la sclérose latérale amyotrophique](https://www.inserm.fr/information-en-sante/dossiers-information/sclerose-laterale-amyotrophique-sla-maladie-charcot) et également appelé maladie de Charcot, l'application est plus généralement destiné à toute personne présentant une incapacité moteur. L'objectif est de faciliter la communication avec une tiers personne afin qu'elle déplace les pièces pendant une partie d'échecs.
+Initialement conçu pour les personnes atteintes de la [maladie  de la sclérose latérale amyotrophique](https://www.inserm.fr/information-en-sante/dossiers-information/sclerose-laterale-amyotrophique-sla-maladie-charcot) également appelé maladie de Charcot, l'application est plus généralement destiné à toute personne présentant une incapacité moteur. L'objectif est de faciliter la communication avec une tiers personne afin qu'elle déplace les pièces pendant une partie d'échecs.
 
 
 Nous travaillons sur l'éligibilité de l'application pendant les tournois officiels organisés par la [Fédération Française des Échecs](http://www.echecs.asso.fr/).
