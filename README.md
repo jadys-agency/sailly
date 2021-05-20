@@ -40,16 +40,16 @@ gradlew run
 
 
 
-**Tableaux de correspondance (anglais - français)**
+**Tableaux de correspondance**
 
-| ANGLAIS |        | FRANÇAIS |          |
-| ------- | ------ | -------- | -------- |
-| K       | King   | R        | Roi      |
-| Q       | Queen  | D        | Dame     |
-| B       | Bishop | F        | Fou      |
-| N       | Knight | C        | Cavalier |
-| R       | Rook   | T        | Tour     |
-| P       | Pawn   | P        | Pion     |
+| ANGLAIS    | FRANÇAIS     |
+| ---------- | ------------ |
+| K - King   | R - Roi      |
+| Q - Queen  | D - Dame     |
+| B - Bishop | F - Fou      |
+| N - Knight | C - Cavalier |
+| R - Rook   | T - Tour     |
+| P - Pawn   | P - Pion     |
 
 
 
