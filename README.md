@@ -36,9 +36,12 @@ gradlew run
 
 ## Utilisation
 
- <img src=".github/assets/example.png" width="350" height="597">  bite
-
-
+<table>
+<tr>
+<td><img src=".github/assets/example.png" width="350" height="597"></td>
+<td valign="top">Texte en haut</td>
+</tr>
+</table>
 
 **Tableaux de correspondance**
 
