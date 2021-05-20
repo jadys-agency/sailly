@@ -13,7 +13,7 @@ Nous travaillons sur l'éligibilité de l'application pendant les tournois offic
 
 ## Installation
 
-Télécharger la dernière version portable ou bien l'installateur pour Windows [ici](/releases/latest).
+Télécharger la dernière version portable ou bien l'installateur pour Windows [ici](https://github.com/jadys-corp/sailly/releases/).
 
 Pour le moment, nous distribuons seulement un exécutable et un installateur pour la plateforme Windows, pour les autres plateformes il sera nécéssaire de compiler le projet et de le lancer via un terminal. Pour se faire, clonez ce dépôt avec la commande :
 
