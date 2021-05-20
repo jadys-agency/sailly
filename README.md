@@ -20,6 +20,21 @@ Télécharger la dernière version pour Windows : [ici](/releases/latest)
 
 ## Utilisation
 
-Blbla
+ <img src=".github/assets/example.png" width="350" height="597">  bite
+
+
+
+**Tableaux de correspondance (anglais - français)**
+
+| ANGLAIS |        | FRANÇAIS |          |
+| ------- | ------ | -------- | -------- |
+| K       | King   | R        | Roi      |
+| Q       | Queen  | D        | Dame     |
+| B       | Bishop | F        | Fou      |
+| N       | Knight | C        | Cavalier |
+| R       | Rook   | T        | Tour     |
+| P       | Pawn   | P        | Pion     |
+
+
 
 **Remarque** : cette application ne permet que la notation algébrique d'un coup, elle n'est pas capable d'aider le joueur dans sa prise de décision.
