@@ -9,14 +9,30 @@ Sailly est un projet open source permettant la prise de notes selon la notation 
 
 Initialement conçu pour les personnes atteintes de la [maladie  de la sclérose latérale amyotrophique](https://www.inserm.fr/information-en-sante/dossiers-information/sclerose-laterale-amyotrophique-sla-maladie-charcot) également appelé maladie de Charcot, l'application est plus généralement destiné à toute personne présentant une incapacité moteur. L'objectif est de faciliter la communication avec une tiers personne afin qu'elle déplace les pièces pendant une partie d'échecs.
 
-
 Nous travaillons sur l'éligibilité de l'application pendant les tournois officiels organisés par la [Fédération Française des Échecs](http://www.echecs.asso.fr/).
-
-
 
 ## Installation
 
-Télécharger la dernière version pour Windows : [ici](/releases/latest)
+Télécharger la dernière version portable ou bien l'installateur pour Windows [ici](/releases/latest).
+
+Pour le moment, nous distribuons seulement un exécutable et un installateur pour la plateforme Windows, pour les autres plateformes il sera nécéssaire de compiler le projet et de le lancer via un terminal. Pour se faire, clonez ce dépôt avec la commande :
+
+```bash
+git clone git@github.com:jadys-corp/sailly.git
+```
+
+Rendez-vous dans le dossier du projet et lancez la commande pour compiler :
+
+```bash
+cd sailly
+gradlew build
+```
+
+Enfin, lancez l'application avec la commande suivante :
+
+```bash
+gradlew run
+```
 
 ## Utilisation
 
