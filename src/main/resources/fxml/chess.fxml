@@ -123,7 +123,7 @@
                                           <String fx:value="bishop" />
                                           <String fx:value="no-focus" />
                                        </styleClass></JFXButton>
-                                    <JFXButton fx:id="buttonQueen" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="75.0" text=" ">
+                                    <JFXButton fx:id="buttonKing" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="75.0" text=" ">
                                        <font>
                                           <Font name="System Bold" size="12.0" />
                                        </font>
@@ -133,7 +133,7 @@
                                           <String fx:value="queen" />
                                           <String fx:value="no-focus" />
                                        </styleClass></JFXButton>
-                                    <JFXButton fx:id="buttonKing" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="75.0" text=" ">
+                                    <JFXButton fx:id="buttonQueen" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="75.0" text=" ">
                                        <font>
                                           <Font name="System Bold" size="12.0" />
                                        </font>
