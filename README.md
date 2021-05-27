@@ -25,21 +25,26 @@ Rendez-vous dans le dossier du projet et lancez la commande pour compiler :
 
 ```bash
 cd sailly
-gradlew build
+./gradlew build
 ```
 
 Enfin, lancez l'application avec la commande suivante :
 
 ```bash
-gradlew run
+./gradlew run
 ```
 
 ## Utilisation
 
 <table>
 <tr>
-<td><img src=".github/assets/example.png" width="350" height="597"></td>
-<td valign="top">Texte en haut</td>
+<td><img src=".github/assets/example.png" width="875"></td>
+  <td valign="top">
+    <p>L'application a été pensée pour être ergonomique et se décompose ainsi en trois parties distinctes. Chacunes de ces parties ou "zones" de l'application répond à un besoin identifié détaillé ci-après.</p>
+    <p>La <b>zone d'affichage</b> se situe en haut à gauche de l'interface, cette partie permet la visualisation du coup à jouer.</p>
+    <p>La <b>zone de saisie</b> se situe à gauche, celle-ci permet d'intéragir avec les boutons afin de décrire une action.</p>
+    <p>La <b>zone d'historique</b> se situe à droite, elle affiche les coups précedemments saisis.</p>
+  </td>
 </tr>
 </table>
 
