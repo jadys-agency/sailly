@@ -43,8 +43,8 @@ Enfin, lancez l'application avec la commande suivante :
   <p>La <b>zone de saisie</b> se situe à gauche, celle-ci permet d'intéragir avec les boutons afin de décrire une action.</p>
   <p>La <b>zone d'historique</b> se situe à droite, elle affiche les coups précedemments saisis.</p>
   <p>Il est possible de verrouiller l'application afin qu'elle reste en permanance au dessus des autres fenêtres en utilisant le bouton prévu à cet effet : </p>
-  <p><img src=".github/assets/lock.png" height="24" /> L'application est verrouillée et restera au dessus des autres fenêtres même lors de la perte du focus.</p>
-  <p><img src=".github/assets/unlock.png" height="24" /> L'application n'est pas verrouillée et adopte un comportement "classique" en passant en arrière-plan lors de la perte du focus.</p>
+  <p><img src=".github/assets/lock.png" height="24" align="left" /> L'application est verrouillée et restera au dessus des autres fenêtres même lors de la perte du focus.</p>
+  <p><img src=".github/assets/unlock.png" height="24" align="left" /> L'application n'est pas verrouillée et adopte un comportement "classique" en passant en arrière-plan lors de la perte du focus.</p>
 </div>
 
 <br><br><br><br><br><br>
