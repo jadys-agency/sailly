@@ -36,17 +36,20 @@ Enfin, lancez l'application avec la commande suivante :
 
 ## Utilisation
 
-<table>
-<tr>
-<td><img src=".github/assets/example.png" width="875"></td>
-  <td valign="top">
-    <p>L'application a été pensée pour être ergonomique et se décompose ainsi en trois parties distinctes. Chacunes de ces parties ou "zones" de l'application répond à un besoin identifié détaillé ci-après.</p>
-    <p>La <b>zone d'affichage</b> se situe en haut à gauche de l'interface, cette partie permet la visualisation du coup à jouer.</p>
-    <p>La <b>zone de saisie</b> se situe à gauche, celle-ci permet d'intéragir avec les boutons afin de décrire une action.</p>
-    <p>La <b>zone d'historique</b> se situe à droite, elle affiche les coups précedemments saisis.</p>
-  </td>
-</tr>
-</table>
+<div>
+  <img align="left" src=".github/assets/example.png" width="350" height="600">
+  <p>L'application a été pensée pour être ergonomique et se décompose ainsi en trois parties distinctes. Chacunes de ces parties ou "zones" de l'application répond à un besoin identifié détaillé ci-après.</p>
+  <p>La <b>zone d'affichage</b> se situe en haut à gauche de l'interface, cette partie permet la visualisation du coup à jouer.</p>
+  <p>La <b>zone de saisie</b> se situe à gauche, celle-ci permet d'intéragir avec les boutons afin de décrire une action.</p>
+  <p>La <b>zone d'historique</b> se situe à droite, elle affiche les coups précedemments saisis.</p>
+  <p>Il est possible de verrouiller l'application afin qu'elle reste en permanance au dessus des autres fenêtres en utilisant le bouton prévu à cet effet : </p>
+  <p><img src=".github/assets/lock.png" height="24" /> L'application est verrouillée et restera au dessus des autres fenêtres même lors de la perte du focus.</p>
+  <p><img src=".github/assets/unlock.png" height="24" /> L'application n'est pas verrouillée et adopte un comportement "classique" en passant en arrière-plan lors de la perte du focus.</p>
+</div>
+
+<br><br><br><br><br><br>
+
+---
 
 **Tableaux de correspondance**
 
@@ -58,7 +61,5 @@ Enfin, lancez l'application avec la commande suivante :
 | N - Knight | C - Cavalier |
 | R - Rook   | T - Tour     |
 | P - Pawn   | P - Pion     |
-
-
 
 **Remarque** : cette application ne permet que la notation algébrique d'un coup, elle n'est pas capable d'aider le joueur dans sa prise de décision.
