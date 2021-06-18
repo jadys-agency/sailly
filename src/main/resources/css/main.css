@@ -82,4 +82,16 @@
 }
 
 
+.lang-us {
+	-fx-background-image: url('../artefacts/flag_us.png');
+	-fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-size: 20px;
+}
 
+.lang-fr {
+	-fx-background-image: url('../artefacts/flag_fr.png');
+	-fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-size: 20px;
+    }

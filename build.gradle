@@ -7,7 +7,7 @@ plugins {
 }
 
 group 'fr.jadys.sailly'
-version '0.1'
+version '0.2'
 
 javafx {
     version = '16'

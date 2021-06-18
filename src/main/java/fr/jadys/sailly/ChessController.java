@@ -3,6 +3,7 @@ package fr.jadys.sailly;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextArea;
 import javafx.application.Platform;
+import javafx.beans.value.ChangeListener;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
@@ -31,7 +32,7 @@ public class ChessController {
     @FXML
     private Label labelMove;
     @FXML
-    private JFXButton buttonClose, buttonLock;
+    private JFXButton buttonClose, buttonLock, buttonLang;
     @FXML
     private Pane paneMoveWindow;
 
@@ -41,6 +42,8 @@ public class ChessController {
     private double yOffset;
 
     private boolean eraseLabelMove = false;
+    private ILang lang = new LangUS();
+    private ChangeListener<String> changeListener = null;
 
     @FXML
     public void initialize() {
@@ -66,111 +69,116 @@ public class ChessController {
     }
 
     private void setRegex() {
-        labelMove.textProperty().addListener((observable, oldValue, newValue) -> {
-            Pattern p = Pattern.compile("^[NRKQPB]$");
+        if (changeListener != null)
+            labelMove.textProperty().removeListener(changeListener);
+
+        final ChessController chessController = this;
+        changeListener = (observable, oldValue, newValue) -> {
+            Pattern p = Pattern.compile(lang.getRegex().get(0));
             Matcher m = p.matcher(newValue);
             if (m.matches()) {
-                this.disableAllButtons();
-                this.enableColumnButtons(true);
-                this.enableRowButtons(true);
-                this.buttonX.setDisable(false);
-                this.buttonTrash.setDisable(false);
+                chessController.disableAllButtons();
+                chessController.enableColumnButtons(true);
+                chessController.enableRowButtons(true);
+                chessController.buttonX.setDisable(false);
+                chessController.buttonTrash.setDisable(false);
                 return;
             }
 
-            p = Pattern.compile("^[NRKQPB][0-8]$");
+            p = Pattern.compile(lang.getRegex().get(1));
             m = p.matcher(newValue);
             if (m.matches()) {
-                this.disableAllButtons();
-                this.enableColumnButtons(true);
-                this.buttonX.setDisable(false);
-                this.buttonTrash.setDisable(false);
+                chessController.disableAllButtons();
+                chessController.enableColumnButtons(true);
+                chessController.buttonX.setDisable(false);
+                chessController.buttonTrash.setDisable(false);
                 return;
             }
 
-            p = Pattern.compile("^[NRKQPB][abcdefgh]$");
+            p = Pattern.compile(lang.getRegex().get(2));
             m = p.matcher(newValue);
             if (m.matches()) {
-                this.disableAllButtons();
-                this.enableColumnButtons(true);
-                this.enableRowButtons(true);
-                this.buttonX.setDisable(false);
-                this.buttonTrash.setDisable(false);
+                chessController.disableAllButtons();
+                chessController.enableColumnButtons(true);
+                chessController.enableRowButtons(true);
+                chessController.buttonX.setDisable(false);
+                chessController.buttonTrash.setDisable(false);
                 return;
             }
 
-            p = Pattern.compile("^[NRKQPB]([abcdefgh]|[0-8])?x$");
+            p = Pattern.compile(lang.getRegex().get(3));
             m = p.matcher(newValue);
             if (m.matches()) {
-                this.disableAllButtons();
-                this.enableColumnButtons(true);
-                this.buttonTrash.setDisable(false);
+                chessController.disableAllButtons();
+                chessController.enableColumnButtons(true);
+                chessController.buttonTrash.setDisable(false);
                 return;
             }
 
-            p = Pattern.compile("^[NRKQPB]([abcdefgh]|[0-8])?x?[abcdefgh]$");
+            p = Pattern.compile(lang.getRegex().get(4));
             m = p.matcher(newValue);
             if (m.matches()) {
-                this.disableAllButtons();
-                this.enableRowButtons(true);
-                this.buttonTrash.setDisable(false);
+                chessController.disableAllButtons();
+                chessController.enableRowButtons(true);
+                chessController.buttonTrash.setDisable(false);
                 return;
             }
 
-            p = Pattern.compile("^[NRKQPB]([abcdefgh]|[0-8])?x?[abcdefgh][0-8]$");
+            p = Pattern.compile(lang.getRegex().get(5));
             m = p.matcher(newValue);
             if (m.matches()) {
-                this.appendToTextMoves(this.labelMove.getText());
-                this.disableAllButtons();
-                this.enablePieceButtons(true);
-                this.buttonChess.setDisable(false);
-                this.buttonCheckMate.setDisable(false);
-                this.enableCastlingButtons(false);
-                this.eraseLabelMove = true;
+                chessController.appendToTextMoves(chessController.labelMove.getText());
+                chessController.disableAllButtons();
+                chessController.enablePieceButtons(true);
+                chessController.buttonChess.setDisable(false);
+                chessController.buttonCheckMate.setDisable(false);
+                chessController.enableCastlingButtons(false);
+                chessController.eraseLabelMove = true;
                 return;
             }
 
-            p = Pattern.compile("^[NRKQPB]([abcdefgh]|[0-8])?x?[abcdefgh][0-8]\\+$");
+            p = Pattern.compile(lang.getRegex().get(6));
             m = p.matcher(newValue);
             if (m.matches()) {
-                this.disableAllButtons();
-                this.enablePieceButtons(true);
-                this.buttonCheckMate.setDisable(false);
-                this.enableCastlingButtons(false);
-                this.eraseLabelMove = true;
+                chessController.disableAllButtons();
+                chessController.enablePieceButtons(true);
+                chessController.buttonCheckMate.setDisable(false);
+                chessController.enableCastlingButtons(false);
+                chessController.eraseLabelMove = true;
                 return;
             }
 
-            p = Pattern.compile("^[NRKQPB]([abcdefgh]|[0-8])?x?[abcdefgh][0-8]\\+?#$");
+            p = Pattern.compile(lang.getRegex().get(7));
             m = p.matcher(newValue);
             if (m.matches()) {
-                this.disableAllButtons();
-                this.enablePieceButtons(true);
-                this.enableCastlingButtons(false);
-                this.eraseLabelMove = true;
+                chessController.disableAllButtons();
+                chessController.enablePieceButtons(true);
+                chessController.enableCastlingButtons(false);
+                chessController.eraseLabelMove = true;
                 return;
             }
 
-            p = Pattern.compile("^(O - O)|(O - O - O)$");
+            p = Pattern.compile(lang.getRegex().get(8));
             m = p.matcher(newValue);
             if (m.matches()) {
-                this.appendToTextMoves(this.labelMove.getText());
-                this.disableAllButtons();
-                this.enablePieceButtons(true);
-                this.enableCastlingButtons(false);
-                this.eraseLabelMove = true;
+                chessController.appendToTextMoves(chessController.labelMove.getText());
+                chessController.disableAllButtons();
+                chessController.enablePieceButtons(true);
+                chessController.enableCastlingButtons(false);
+                chessController.eraseLabelMove = true;
                 return;
             }
-        });
+        };
+        labelMove.textProperty().addListener(changeListener);
     }
 
     private void setActions() {
-        this.buttonKnight.setOnAction(event -> placePiece("N"));
-        this.buttonRook.setOnAction(event -> placePiece("R"));
-        this.buttonKing.setOnAction(event -> placePiece("K"));
-        this.buttonQueen.setOnAction(event -> placePiece("Q"));
-        this.buttonPawn.setOnAction(event -> placePiece("P"));
-        this.buttonBishop.setOnAction(event -> placePiece("B"));
+        this.buttonKnight.setOnAction(event -> placePiece(lang.getKnightLetter()));
+        this.buttonRook.setOnAction(event -> placePiece(lang.getRookLetter()));
+        this.buttonKing.setOnAction(event -> placePiece(lang.getKingLetter()));
+        this.buttonQueen.setOnAction(event -> placePiece(lang.getQueenLetter()));
+        this.buttonPawn.setOnAction(event -> placePiece(lang.getPawnLetter()));
+        this.buttonBishop.setOnAction(event -> placePiece(lang.getBishopLetter()));
 
         this.buttonOne.setOnAction(event -> appendToLabelMove("1"));
         this.buttonTwo.setOnAction(event -> appendToLabelMove("2"));
@@ -233,6 +241,20 @@ public class ChessController {
                 this.stage.setAlwaysOnTop(true);
                 this.buttonLock.getStyleClass().remove("unlock");
                 this.buttonLock.getStyleClass().add("lock");
+            }
+        });
+
+        this.buttonLang.setOnAction(event -> {
+            if (this.buttonLang.getStyleClass().contains("lang-fr")) {
+                lang = new LangUS();
+                setRegex();
+                this.buttonLang.getStyleClass().remove("lang-fr");
+                this.buttonLang.getStyleClass().add("lang-us");
+            } else {
+                lang = new LangFR();
+                setRegex();
+                this.buttonLang.getStyleClass().remove("lang-us");
+                this.buttonLang.getStyleClass().add("lang-fr");
             }
         });
 

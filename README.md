@@ -3,7 +3,7 @@
 
 # SAILLY
 
-![](https://img.shields.io/badge/version-0.1-blue) ![](https://img.shields.io/badge/utilisation%20en%20club-oui-green) ![](https://img.shields.io/badge/utilisation%20en%20tournois-travail%20en%20cours-red)
+![](https://img.shields.io/badge/version-0.2-blue) ![](https://img.shields.io/badge/utilisation%20en%20club-oui-green) ![](https://img.shields.io/badge/utilisation%20en%20tournois-travail%20en%20cours-red)
 
 Sailly est un projet open source permettant la prise de notes selon la notation algébrique simplifiée pour le jeu des échecs. La solution est développée autour de Java et utilise la plateforme d'application client [JavaFX](https://openjfx.io/) ainsi que la bibliothèque [JFoenix](https://github.com/sshahine/JFoenix) pour la partie graphique.
 
